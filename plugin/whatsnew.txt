@@ -1,13 +1,10 @@
 Changelog
 =========
 
-Git 254-256
+Git 251-257
 - MMC support (Experimental), Skin is not optimized for it yet!
-- Bitbake recipe changed:mo compile and chmod update, Thanks to Erik Slagter (eriksl)
+- Bitbake recipe changed: Better mo compile and chmod, Thanks to Erik Slagter (eriksl). Shell scripts are executable in our git but distutils won't make them executable so do something about it.
 - Version change from 22 to 23.
-
-Git 251-253
-- Bitbake recipe changed: Shell scripts are executable in our git but distutils won't make them executable so do something about it.
 
 Git 248-250
 - maintainer.info removed, No need for this file anymore.
