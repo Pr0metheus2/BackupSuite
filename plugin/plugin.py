@@ -14,7 +14,7 @@ from Components.Label import Label
 from Components.ScrollLabel import ScrollLabel
 from Components.Sources.StaticText import StaticText
 from Plugins.Plugin import PluginDescriptor
-from Tools.Directories import resolveFilename, fileExists, SCOPE_LANGUAGE, SCOPE_PLUGINS
+from Tools.Directories import resolveFilename, SCOPE_LANGUAGE, SCOPE_PLUGINS
 from os import environ
 import NavigationInstance
 from Tools import Notifications
@@ -53,6 +53,7 @@ _session = None
 
 BACKUP_HDD = "/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/backuphdd.sh en_EN"
 BACKUP_USB = "/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/backupusb.sh en_EN"
+BACKUP_MMC = "/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/backupmmc.sh en_EN"
 ofgwrite_bin = "/usr/bin/ofgwrite"
 LOGFILE = "BackupSuite.log"
 VERSIONFILE = "imageversion"
@@ -73,6 +74,10 @@ def backupCommandHDD():
 
 def backupCommandUSB():
 	cmd = BACKUP_USB
+	return cmd
+
+def backupCommandMMC():
+	cmd = BACKUP_MMC
 	return cmd
 
 
@@ -105,6 +110,7 @@ class BackupStart(Screen):
 		self["key_red"] = Button(_("Close"))
 		self["key_green"] = Button(_("Backup > HDD"))
 		self["key_yellow"] = Button(_("Backup > USB"))
+		self["key_text"] = Button(_("Backup > MMC"))
 		self["key_blue"] = Button(_("Restore backup"))
 		self["help"] = StaticText()
 		self["setupActions"] = ActionMap(["SetupActions", "ColorActions", "EPGSelectActions", "HelpActions"],
@@ -112,6 +118,7 @@ class BackupStart(Screen):
 			"red": self.cancel,
 			"green": self.confirmhdd,
 			"yellow": self.confirmusb,
+			"text": self.confirmmmc,
 			"blue": self.flashimage,
 			"info": self.keyInfo,
 			"cancel": self.cancel,
@@ -124,6 +131,9 @@ class BackupStart(Screen):
 		
 	def confirmusb(self):
 		self.session.openWithCallback(self.backupusb, MessageBox, _("Do you want to make a back-up on USB?\n\nThis only takes a few minutes depending on the used filesystem and is fully automatic.\n\nMake sure you first insert an USB flash drive before you select Yes.") , MessageBox.TYPE_YESNO, timeout = 20, default = True)
+
+	def confirmmmc(self):
+		self.session.openWithCallback(self.backupmmc, MessageBox, _("Do you want to make an USB-back-up image on MMC? \n\nThis only takes a few minutes and is fully automatic.\n") , MessageBox.TYPE_YESNO, timeout = 20, default = True)
 
 	def showHelp(self):
 		from plugin import backupsuiteHelp
@@ -184,6 +194,13 @@ class BackupStart(Screen):
 			self.writeEnigma2VersionFile()
 			text = _('Full back-up to USB')
 			cmd = backupCommandUSB()
+			self.session.openWithCallback(self.consoleClosed,Console,text,[cmd])
+
+	def backupmmc(self, ret = False ):
+		if (ret == True):
+			self.writeEnigma2VersionFile()
+			text = _('Full back-up on MMC')
+			cmd = backupCommandMMC()
 			self.session.openWithCallback(self.consoleClosed,Console,text,[cmd])
 
 	def consoleClosed(self, answer=None): 

@@ -153,6 +153,10 @@ def message34():
 	print _("The program will abort, please try another medium with more free space to create your back-up.")
 	return
 
+def message35():
+	sys.stdout.write(_("Full back-up to the MultiMediaCard"))
+	return
+
 globals()[sys.argv[2]]()
 os_environ["LANGUAGE"] = sys.argv[1]
 

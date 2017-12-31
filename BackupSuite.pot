@@ -19,9 +19,21 @@ msgstr ""
 msgid "Full back-up on HDD"
 msgstr ""
 
+msgid "Full back-up on MMC"
+msgstr ""
+
 #:plugin 109
 msgid ""
 "Do you want to make an USB-back-up image on HDD? \n"
+"\n"
+"This only takes a few minutes and is fully automatic.\n"
+msgstr ""
+""
+""
+""
+
+msgid ""
+"Do you want to make an USB-back-up image on MMC? \n"
 "\n"
 "This only takes a few minutes and is fully automatic.\n"
 msgstr ""
@@ -202,6 +214,10 @@ msgstr ""
 msgid "The program will abort, please try another medium with more free space to create your back-up."
 msgstr ""
 
+#:message35
+msgid "Full back-up to the MultiMediaCard"
+msgstr ""
+
 #: plugin.py 294
 msgid ""
 "\n"
@@ -338,6 +354,9 @@ msgstr ""
 
 #: plugin.py 92
 msgid "Backup > HDD"
+msgstr ""
+
+msgid "Backup > MMC"
 msgstr ""
 
 #: plugin.py 93
