@@ -19,6 +19,7 @@ skinstartfullhd = """
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_red.png"	position="187,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_green.png"	position="622,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_yellow.png" position="1057,1030" size="38,38" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_text.png" alphatest="on" position="1100,1030" size="54,38" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_blue.png"	position="1492,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_info.png" alphatest="on" position="115,1030" size="54,38" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_help.png" alphatest="on" position="40,1030" size="51,38" />
@@ -26,6 +27,7 @@ skinstartfullhd = """
 		<widget name="key_red" 		position="239,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00ff0000" font="Regular;34" /> 
 		<widget name="key_green"	position="674,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#0053b611" font="Regular;34" /> 
 		<widget name="key_yellow" 	position="1109,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00F9C731" font="Regular;34" />
+		<widget name="key_text" 	position="1150,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00A4A4A4" font="Regular;34" />
 		<widget name="key_blue" 	position="1544,1030" size="380,36" valign="top" halign="left" zPosition="4"  foregroundColor="#003a71c3" font="Regular;34" />
 		<widget source="help" render="Label" position="5,345" size="590,83" font="Regular;21" />
 	</screen>"""
@@ -38,6 +40,7 @@ skinstarthd = """
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/red.png"	position="145,641" size="30,30" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/green.png"	position="420,641" size="30,30" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/yellow.png" position="695,641" size="30,30" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/key_text.png" alphatest="on" position="710,641" size="35,25" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/blue.png"	position="970,641" size="30,30" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/key_info.png" alphatest="on" position="110,645" size="35,25" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/key_help.png" alphatest="on" position="70,645" size="35,25" />
@@ -56,6 +59,7 @@ skinstarthd = """
 		<widget name="key_red" 		position="180,643" size="220,28"  valign="top" halign="left" zPosition="4"  foregroundColor="#00ff0000" font="Regular;22" /> 
 		<widget name="key_green"	position="455,643" size="220,28"  valign="top" halign="left" zPosition="4"  foregroundColor="#0053b611" font="Regular;22" /> 
 		<widget name="key_yellow" 	position="730,643" size="220,28"  valign="top" halign="left" zPosition="4"  foregroundColor="#00F9C731" font="Regular;22" />
+		<widget name="key_text" 	position="750,643" size="220,28"  valign="top" halign="left" zPosition="4"  foregroundColor="#00A4A4A4" font="Regular;22" />
 		<widget name="key_blue" 	position="1005,643" size="220,28" valign="top" halign="left" zPosition="4"  foregroundColor="#003a71c3" font="Regular;22" />
 		<widget source="help" render="Label" position="5,345" size="590,83" font="Regular;21" />
 	</screen>"""
@@ -69,10 +73,12 @@ skinstartsd = """
 		<ePixmap pixmap="skin_default/buttons/button_red.png" zPosition="1" position="10,516" size="15,16" alphatest="blend"/>
 		<ePixmap pixmap="skin_default/buttons/button_green.png" zPosition="1" position="190,516" size="15,16" alphatest="blend"/>
 		<ePixmap pixmap="skin_default/buttons/button_yellow.png" zPosition="1" position="370,516" size="15,16" alphatest="blend"/>
+		<ePixmap pixmap="skin_default/buttons/key_text.png" zPosition="1" position="390,516" size="35,25" alphatest="blend"/>
 		<ePixmap pixmap="skin_default/buttons/button_blue.png" zPosition="1" position="550,516" size="15,16" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="30,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#00ff0000" halign="left" valign="top" />
 		<widget source="key_green" render="Label" position="210,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#0053b611" halign="left" valign="top" />
 		<widget source="key_yellow" render="Label" position="390,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#00F9C731" halign="left" valign="top" />
+		<widget source="key_text" render="Label" position="410,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#00A4A4A4" halign="left" valign="top" />
 		<widget source="key_blue" render="Label" position="570,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#003a71c3" halign="left" valign="top" />
 	</screen>"""
 
@@ -142,11 +148,13 @@ skinflashfullhd = """
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_red.png"	position="187,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_green.png"	position="622,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_yellow.png" position="1057,1030" size="38,38" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_text.png" position="1100,1030" size="38,38" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/f_blue.png" position="1492,1030" size="38,38" alphatest="on" />
 
 		<widget source="key_red" 		render="Label" 	position="239,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00ff0000" font="Regular;34" /> 
 		<widget source="key_green" 	render="Label" 	position="674,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#0053b611" font="Regular;34" /> 
 		<widget source="key_yellow"	render="Label" 	position="1109,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00F9C731" font="Regular;34" />
+		<widget source="key_text"	render="Label" 	position="1120,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00A4A4A4" font="Regular;34" />
 		<widget source="key_blue"	render="Label" 	position="1543,1030" size="380,36"  valign="top" halign="left" zPosition="4"  foregroundColor="#00F9C731" font="Regular;34" />
 		<widget source="curdir" 	render="Label" 	position="780,120" size="1100,40" valign="top" halign="left" zPosition="4" foregroundColor="#00f0f0f0" font="Regular;28"  backgroundColor="#00000000" transparent="1" noWrap="1" />
 		<widget name="filelist" position="780,160" size="1120,840" scrollbarMode="showOnDemand" />
@@ -172,10 +180,12 @@ skinflashhd = """
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/red.png" position="145,641" size="30,30" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/green.png" position="420,641" size="30,30" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/yellow.png" position="695,641" size="30,30" alphatest="on" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/key_text.png" position="710,641" size="30,30" alphatest="on" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/BackupSuite/img/blue.png" position="970,641" size="30,30" alphatest="on" />
 		<widget source="key_red" 	render="Label" position="180,643" size="220,28" valign="top" halign="left" zPosition="4" foregroundColor="#00ff0000" font="Regular;22"    />
 		<widget source="key_green" 	render="Label" position="455,643" size="220,28" valign="top" halign="left" zPosition="4" foregroundColor="#0053b611" font="Regular;22" /> 
 		<widget source="key_yellow"	render="Label" position="730,643" size="220,28" valign="top" halign="left" zPosition="4" foregroundColor="#00F9C731" font="Regular;22"  />
+		<widget source="key_text"	render="Label" position="750,643" size="220,28" valign="top" halign="left" zPosition="4" foregroundColor="#00A4A4A4" font="Regular;22"  />
 		<widget source="key_blue"	render="Label" position="1005,643" size="220,28" valign="top" halign="left" zPosition="4" foregroundColor="#003a71c3" font="Regular;22"  />
 		<widget source="curdir" 	render="Label" position="525,100" size="1000,40" valign="top" halign="left" zPosition="4" foregroundColor="#00f0f0f0" font="Regular;22"  backgroundColor="#00000000" transparent="1" noWrap="1" />
 		<widget name="filelist" position="525,150" size="500,460" scrollbarMode="showOnDemand" />
@@ -188,10 +198,12 @@ skinflashsd = """
 		<ePixmap pixmap="skin_default/buttons/button_red.png" zPosition="1" position="10,516" size="15,16" alphatest="blend"/>
 		<ePixmap pixmap="skin_default/buttons/button_green.png" zPosition="1" position="190,516" size="15,16" alphatest="blend"/>
 		<ePixmap pixmap="skin_default/buttons/button_yellow.png" zPosition="1" position="370,516" size="15,16" alphatest="blend"/>
+		<ePixmap pixmap="skin_default/buttons/key_text.png" zPosition="1" position="390,516" size="15,16" alphatest="blend"/>
 		<ePixmap pixmap="skin_default/buttons/button_blue.png" zPosition="1" position="550,516" size="15,16" alphatest="blend"/>
 		<widget source="key_red" render="Label" position="30,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#00ff0000" halign="left" valign="top" />
 		<widget source="key_green" render="Label" position="210,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#0053b611" halign="left" valign="top" />
 		<widget source="key_yellow" render="Label" position="390,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#00F9C731" halign="left" valign="top" />
+		<widget source="key_text" render="Label" position="410,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#00A4A4A4" halign="left" valign="top" />
 		<widget source="key_blue" render="Label" position="550,514" zPosition="1" size="150,45" font="Regular;20" foregroundColor="#003a71c3" halign="left" valign="top" />
 		<widget source="curdir" 	render="Label" position="10,88" size="700,40" valign="top" halign="left" zPosition="4" foregroundColor="#00f0f0f0" font="Regular;18"  backgroundColor="#00000000" transparent="1" noWrap="1" />
 		<widget name="filelist" position="20,120" size="690,390" scrollbarMode="showOnDemand" />
